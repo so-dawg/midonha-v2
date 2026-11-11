@@ -151,3 +151,36 @@ classDiagram
     Recipe *-- RecipeIngredient
     OrderBoard --> GameManager : reads orders
 ```
+
+### Flowchart Diagram
+
+```mermaid
+graph TD
+    %% Phase 1: Foundation
+    subgraph Phase1 [1 Foundation]
+        F1[Project and assets] --> F2[Player movement]
+        F2 --> F3[Animation, camera]
+        F3 --> F4[New input system]
+        F4 --> F5[Collision detection]
+    end
+
+    %% Phase 2: Kitchen gameplay
+    subgraph Phase2 [2 Kitchen gameplay]
+        K1[Clear counter] --> K2[Kitchen objects]
+        K2 --> K3[Container, cutting]
+        K3 --> K4[Stove, trash]
+        K4 --> K5[Plates, plate UI]
+    end
+
+    %% Phase 3: Game flow
+    subgraph Phase3 [3 Game flow]
+        G1[Delivery and orders] --> G2[Sound and music]
+        G2 --> G3[Start, game over]
+        G3 --> G4[Menus and options]
+        G4 --> G5[Polish and ship]
+    end
+
+    %% Connections between phases
+    F5 ==> K1
+    K5 ==> G1
+```
