@@ -72,7 +72,12 @@ classDiagram
         +startWork()
         +update()
     }
-    class CuttingBoard
+    class CuttingBoard {
+        +cuttingProgress
+        +cuttingProgressMax
+        +cut()
+        +testCuttingProgress()
+    }
     class Stove {
         +cookingTimer
         +burningTimer
