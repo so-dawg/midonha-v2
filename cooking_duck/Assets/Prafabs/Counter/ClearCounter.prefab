@@ -67,6 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5109755dd6b2ebe459e17c391021bc5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClearCounter
+  tomatoPrefab: {fileID: 3088297064704926556, guid: e587efcc84a4f443c8a360afcee1b290, type: 3}
 --- !u!1001 &2203106294203550435
 PrefabInstance:
   m_ObjectHideFlags: 0
