@@ -12,7 +12,7 @@ public class MainMenuScript : MonoBehaviour
     {
         startButton.onClick.AddListener(() =>
         {
-            Loader.Load(Loader.Scene.SampleScene);
+            Loader.Load(Loader.Scene.GameScene);
         });
         
         startButton.onClick.AddListener(() => {

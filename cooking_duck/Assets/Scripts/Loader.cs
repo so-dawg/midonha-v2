@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public static class Loader
 {
-    public enum Scene { MainMenuScene, SampleScene, LoadingScene}
+    public enum Scene { MainMenuScene, GameScene, LoadingScene}
     private static Scene target;
 
     public static void Load(Scene scene)
