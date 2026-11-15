@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3187838834277086178, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.045
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841286013473667211, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 91e8fe3de9249fc44b7bdd8050062896, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -233,6 +241,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261771210811040880, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5850129231471598083, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -284,8 +296,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad5f505208755979aaa4a360d8bf05cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectedCounterVisaul
-  clearCounter: {fileID: 0}
-  visualGameObject: {fileID: 5924538329320126498}
+  baseCounter: {fileID: 6412708347279967836}
+  visualGameObjectArray:
+  - {fileID: 5924538329320126498}
+  - {fileID: 5711396954222811051}
+  - {fileID: 4226058078594531910}
+  - {fileID: 4552962970447202720}
+--- !u!1 &4226058078594531910 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 353237590725857035, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
+  m_PrefabInstance: {fileID: 4486441581222268237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4552962970447202720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 102550813385737453, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
+  m_PrefabInstance: {fileID: 4486441581222268237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5711396954222811051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8143070647044102886, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
+  m_PrefabInstance: {fileID: 4486441581222268237}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5924538329320126498 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7816906318471787887, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
