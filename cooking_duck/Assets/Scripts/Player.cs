@@ -31,6 +31,11 @@ public class Player : MonoBehaviour, IKitchenObjectParrent
       Debug.LogError("This is more than one Player instance");
     }
     Instance = this;
+
+    if (gameInput == null)
+    {
+      gameInput = FindFirstObjectByType<GameInput>();
+    }
   }
   private void Start()
   {
