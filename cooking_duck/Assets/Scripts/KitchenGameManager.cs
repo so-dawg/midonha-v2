@@ -42,8 +42,8 @@ public class KitchenGameManager : MonoBehaviour
                 if (WaitingToStartTimer < 0f)
                 {
                     state = State.CountdownToStart;
+                    OnStateChanged?.Invoke(this, EventArgs.Empty);
                 }
-                OnStateChanged?.Invoke(this, EventArgs.Empty);
                 break;
             
             case State.CountdownToStart:
@@ -52,8 +52,8 @@ public class KitchenGameManager : MonoBehaviour
                 {
                     state = State.GamePlaying;
                     GamePlayingTimer = GamePlayingTimerMax;
+                    OnStateChanged?.Invoke(this, EventArgs.Empty);
                 }
-                OnStateChanged?.Invoke(this, EventArgs.Empty);
                 break;
 
             case State.GamePlaying:
@@ -61,14 +61,13 @@ public class KitchenGameManager : MonoBehaviour
                 if (GamePlayingTimer < 0f)
                 {
                     state = State.GameOver;
+                    OnStateChanged?.Invoke(this, EventArgs.Empty);
                 }
-                OnStateChanged?.Invoke(this, EventArgs.Empty);
                 break;
 
             case State.GameOver:
                 break;         
         }
-        
     }
     
     public bool IsGamePlaying()
