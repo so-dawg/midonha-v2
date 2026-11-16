@@ -17,7 +17,9 @@ public class MainMenuScript : MonoBehaviour
         
         startButton.onClick.AddListener(() => {
             Application.Quit();
-        });    
+        });
+
+        Time.timeScale = 1f;    
     }
 
 }
