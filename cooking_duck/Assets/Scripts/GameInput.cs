@@ -37,4 +37,16 @@ public class GameInput : MonoBehaviour
 
     return inputVector;
   }
+
+
+  private void OnDestroy()
+  {
+    if (inputSystem_Actions != null)
+    {
+      inputSystem_Actions.Player.Interact.performed -= Interact_performed;
+      inputSystem_Actions.Player.InteractAlternate.performed -= InteractAlternate_performaned;
+
+      inputSystem_Actions.Dispose();
+    }
+  }
 }
