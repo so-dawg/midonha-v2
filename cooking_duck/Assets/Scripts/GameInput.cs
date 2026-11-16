@@ -37,7 +37,7 @@ public class GameInput : MonoBehaviour
 
   private void Pause_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj){
         
-        OnPauseGame?.Invoke(this, EventArgs.Empty);
+    OnPauseGame?.Invoke(this, EventArgs.Empty);
   }
 
   public Vector2 GetMovementVectorNormalized()

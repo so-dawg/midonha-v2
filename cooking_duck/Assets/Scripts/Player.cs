@@ -45,6 +45,7 @@ public class Player : MonoBehaviour, IKitchenObjectParrent
 
   private void GameInput_OninteractAction(object sender, System.EventArgs e)
   {
+    if (!KitchenGameManager.Instance.IsGamePlaying()) return;
     if (selectedCounter != null)
     {
       selectedCounter.Interact(this);
@@ -54,6 +55,7 @@ public class Player : MonoBehaviour, IKitchenObjectParrent
   }
   private void GameInput_OninteractAlternateAction(object sender, System.EventArgs e)
   {
+    if (!KitchenGameManager.Instance.IsGamePlaying()) return;
     if (selectedCounter != null)
     {
       selectedCounter.InteractAlternate(this);
@@ -110,7 +112,7 @@ public class Player : MonoBehaviour, IKitchenObjectParrent
 
   private void HandleMovement()
   {
-
+    if (!KitchenGameManager.Instance.IsGamePlaying()) return; // Cannot move until the game starts (Remove this if you wish)
     Vector2 inputVector = gameInput.GetMovementVectorNormalized();
 
     Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
