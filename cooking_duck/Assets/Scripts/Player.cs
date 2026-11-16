@@ -22,7 +22,7 @@ public class Player : MonoBehaviour, IKitchenObjectParrent
   private bool isWalking;
   private Vector3 lastInteractionDir;
   private BaseCounter selectedCounter;
-  private kitchenObject kitchenObject;
+  private KitchenObject kitchenObject;
 
   private void Awake()
   {
@@ -180,12 +180,12 @@ public class Player : MonoBehaviour, IKitchenObjectParrent
     return kitchenObjectHoldPoint;
   }
 
-  public void SetKitchenObject(kitchenObject kitchenObject)
+  public void SetKitchenObject(KitchenObject kitchenObject)
   {
     this.kitchenObject = kitchenObject;
   }
 
-  public kitchenObject GetKitchenObject()
+  public KitchenObject GetKitchenObject()
   {
     return kitchenObject;
   }
