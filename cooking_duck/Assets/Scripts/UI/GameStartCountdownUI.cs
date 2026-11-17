@@ -1,40 +1,41 @@
 using System;
 using TMPro;
-using UnityEditor.Search;
+//using UnityEditor.Search;
 using UnityEngine;
 
 public class GameStartCountdownUI : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI countdownText;
+  [SerializeField] private TextMeshProUGUI countdownText;
 
-    private void Start()
-    {
-        KitchenGameManager.Instance.OnStateChanged += KitchenGameManager_OnStateChanged;
-        Hide();
-    }
+  private void Start()
+  {
+    KitchenGameManager.Instance.OnStateChanged += KitchenGameManager_OnStateChanged;
+    Hide();
+  }
 
-    private void KitchenGameManager_OnStateChanged(object sender, EventArgs e)
+  private void KitchenGameManager_OnStateChanged(object sender, EventArgs e)
+  {
+    if (KitchenGameManager.Instance.IsCountdownToStartActive())
     {
-        if (KitchenGameManager.Instance.IsCountdownToStartActive())
-        {
-            Show();
-        } else
-        {
-            Hide();
-        }
+      Show();
     }
+    else
+    {
+      Hide();
+    }
+  }
 
-    private void Update()
-    {
-        countdownText.text = KitchenGameManager.Instance.GetCountdownToStartTimer().ToString("#");
-    }
-    private void Show()
-    {
-        gameObject.SetActive(true);
-    }
-    
-     private void Hide()
-    {
-        gameObject.SetActive(false);
-    }
+  private void Update()
+  {
+    countdownText.text = KitchenGameManager.Instance.GetCountdownToStartTimer().ToString("#");
+  }
+  private void Show()
+  {
+    gameObject.SetActive(true);
+  }
+
+  private void Hide()
+  {
+    gameObject.SetActive(false);
+  }
 }

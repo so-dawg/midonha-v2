@@ -15,7 +15,7 @@ public class MainMenuScript : MonoBehaviour
             Loader.Load(Loader.Scene.GameScene);
         });
         
-        startButton.onClick.AddListener(() => {
+        quitButton.onClick.AddListener(() => {
             Application.Quit();
         });
 
