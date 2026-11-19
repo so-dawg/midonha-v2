@@ -7,6 +7,8 @@ public class DeliveryManager : MonoBehaviour {
     public event EventHandler OnRecipeSpawned;
     public event EventHandler OnRecipeCompleted;
     public static DeliveryManager Instance {  get; private  set;}
+    public event EventHandler OnRecipeSuccess;
+    public event EventHandler OnRecipeFailed;
 
     [SerializeField] private RecipeListSO recipeListSO;
     private List<RecipeSO> waitingRecipeSOList;
@@ -74,12 +76,14 @@ public class DeliveryManager : MonoBehaviour {
                     waitingRecipeSOList.RemoveAt(i);
 
                     OnRecipeCompleted?.Invoke(this, EventArgs.Empty);
+                    OnRecipeSuccess?.Invoke(this,EventArgs.Empty);
                     return;
                 }
             }
         }
         // no matches found 
         // player did not correct the recipe
+        OnRecipeFailed?.Invoke(this,EventArgs.Empty);
     }
 
     public List<RecipeSO> GetWaitingRecipeSOList()
